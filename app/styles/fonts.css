@@ -1,0 +1,34 @@
+/* latin */
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoDraft'), local('RobotoDraft-Regular'), url(fonts/RobotoDraft-Regular.woff2) format('woff2');
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoDraft Medium'), local('RobotoDraft-Medium'), url(fonts/RobotoDraft-Medium.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoDraft Bold'), local('RobotoDraft-Bold'), url(fonts/RobotoDraft-Bold.woff2) format('woff2');
+}
+
+
+
+/* latin */
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: italic;
+  font-weight: 400;
+  src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), url(fonts/RobotoDraft-Italic.woff2) format('woff2');
+}

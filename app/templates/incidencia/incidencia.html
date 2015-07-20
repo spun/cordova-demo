@@ -1,0 +1,12 @@
+<md-card>
+	<h3>Datos del ticket</h3>
+	<p><b>Sector:</b> 1</p>
+	<p><b>Posición:</b> F4 C3 P1</p>
+</md-card>
+<md-card>
+	<h3>Listado de incidencias</h3>
+	<p ng-repeat="incidencia in listadoIncidencias">{{incidencia.descripcion}}</p>
+	<md-button class="md-fab md-primary" md-theme="orange" ng-click="showListBottomSheet()" aria-label="New document" style="bottom: 24px;right: 24px;position: absolute;">
+	    <md-icon  icon="images/ic_add_24px_white.svg"></md-icon>
+	</md-button>
+</md-card>

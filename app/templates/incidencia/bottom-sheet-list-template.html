@@ -1,0 +1,30 @@
+<md-bottom-sheet class="md-list md-has-header">
+  <md-subheader>Seleccionar incidencia</md-subheader>
+  <md-list>
+
+    <md-item>
+      <md-button aria-label="No cobrado" ng-click="addIncidencia('no-revisado')">
+        <span class="md-inline-list-icon-label">No revisado</span>
+      </md-button>
+    </md-item>
+
+    <md-item>
+      <md-button aria-label="No cobrado" ng-click="addIncidencia('no-cobrado')">
+        <span class="md-inline-list-icon-label">No cobrado</span>
+      </md-button>
+    </md-item>
+
+    <md-item>
+      <md-button aria-label="Falta material" ng-click="addIncidencia('falta-material')">
+        <span class="md-inline-list-icon-label">Falta material</span>
+      </md-button>
+    </md-item>
+
+    <md-item>
+      <md-button aria-label="Rotura" ng-click="addIncidencia('rotura')">
+        <span class="md-inline-list-icon-label">Rotura</span>
+      </md-button>
+    </md-item>
+
+  </md-list>
+</md-bottom-sheet>

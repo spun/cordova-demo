@@ -1,0 +1,31 @@
+<md-card ng-repeat="articulo in articulos" ng-cloak layout="row" layout-align="space-between center">
+	<div class="md-tile-left">
+		<img ng-src="images/{{articulo.DESC_ARTICULO}}.png" class="face" alt="{{item.who}}">
+	</div>
+	<div>{{articulo.DESC_ARTICULO}}</div>
+
+	<div layout="row" layout-align="space-around center">
+		<div ng-click="remove(articulo)">
+			<md-button class="md-raised" md-theme="pink" aria-label="Time">
+				<md-icon icon="images/ic_remove_24px.svg"></md-icon>
+			</md-button>
+		</div>
+		<div style="width: 60px;text-align: center"> {{articulo.cantidad}} x </div>
+		<div ng-click="add(articulo)">
+			<md-button class="md-raised" md-theme="blue" aria-label="Time" >
+				<md-icon icon="images/ic_add_24px.svg"></md-icon>
+			</md-button>
+		</div>
+		<div style="width: 60px;text-align: center">{{articulo.PRECIO}} €</div>
+	</div>
+
+</md-card>
+
+<div layout-align="space-around center" layout="row" layout-padding>
+<h4>Número de articulos: {{cantidadTotal}}</h4>
+<h2>TOTAL: {{precioTotal}} €</h2>
+</div>
+
+<div layout="row" layout-align="end center" style="margin-right: 20px;">
+  <md-button class="md-raised md-primary" md-theme="green" ng-click="cobrar($event)">Cobrar</md-button>
+</div>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js" ng-app="smartBeach" ng-strict-di ng-controller="MainCtrl">
+	<head>
+		<meta charset="utf-8">
+		<title>smartBeach</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<!-- build:css(.) styles/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!-- build:css(.tmp) styles/main.css -->
+		<link rel="stylesheet" href="styles/amber-theme.css" />
+		<link rel="stylesheet" href="styles/blue-grey-theme.css" />
+		<link rel="stylesheet" href="styles/blue-theme.css" />
+		<link rel="stylesheet" href="styles/brown-theme.css" />
+		<link rel="stylesheet" href="styles/cyan-theme.css" />
+		<link rel="stylesheet" href="styles/deep-orange-theme.css" />
+		<link rel="stylesheet" href="styles/green-theme.css" />
+		<link rel="stylesheet" href="styles/grey-theme.css" />
+		<link rel="stylesheet" href="styles/indigo-theme.css" />
+		<link rel="stylesheet" href="styles/light-blue-dark-theme.css" />
+		<link rel="stylesheet" href="styles/light-green-theme.css" />
+		<link rel="stylesheet" href="styles/lime-theme.css" />
+		<link rel="stylesheet" href="styles/orange-theme.css" />
+		<link rel="stylesheet" href="styles/pink-theme.css" />
+		<link rel="stylesheet" href="styles/purple-theme.css" />
+		<link rel="stylesheet" href="styles/red-theme.css" />
+
+		<link rel="stylesheet" href="styles/teal-theme.css" />
+
+		<link rel="stylesheet" href="styles/yellow-theme.css" />
+
+
+		<link rel="stylesheet" href="styles/main.css">
+		<!-- endbuild -->
+	</head>
+	<body layout="row" md-theme="teal">
+
+		<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+			<md-toolbar class="md-theme-indigo">
+				<h1 class="md-toolbar-tools">smartBeach</h1>
+			</md-toolbar>
+			<md-content flex="" style="overflow: auto;" class="md-blue-theme">
+				<div>
+					<button class="menu-item menu-title md-menu-item" md-ink-ripple="#bbb" tabindex="0" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+					Demos
+					</button>
+
+					<a class="menu-item menu-sub-item md-menu-item" ng-click="sidenavSelection('sector')" md-ink-ripple="#bbb" aria-hidden="false" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+						<span>Zonas</span>
+					</a>
+
+					<a class="menu-item menu-sub-item md-menu-item" ng-click="sidenavSelection('posicion')" md-ink-ripple="#bbb" aria-hidden="false" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+						<span>Posiciones</span>
+					</a>
+
+					<a class="menu-item menu-sub-item md-menu-item" ng-click="sidenavSelection('database')" md-ink-ripple="#bbb" aria-hidden="false" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+						<span>Database</span>
+					</a>
+
+					<button class="menu-item menu-title md-menu-item" md-ink-ripple="#bbb" tabindex="0" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+					Tests
+					</button>
+
+					<a class="menu-item menu-sub-item md-menu-item" ng-click="sidenavSelection('network')" md-ink-ripple="#bbb" aria-hidden="false" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+						<span>Network</span>
+					</a>
+
+					<button class="menu-item menu-title md-menu-item" md-ink-ripple="#bbb" tabindex="0" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+					Session
+					</button>
+
+					<a class="menu-item menu-sub-item md-menu-item" ng-click="sidenavSelection('login')" md-ink-ripple="#bbb" aria-hidden="false" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+						<span>Salir</span>
+					</a>
+				</div>
+
+			</md-content>
+		</md-sidenav>
+
+		<div layout="column" layout-fill>
+			<!--md-toolbar style="box-shadow: 0 2px 5px rgba(0,0,0,.26);">
+				<div class="md-toolbar-tools" flex layout="column">
+					<div layout="row" flex>
+						<button ng-click="toggleLeft()" style="background: none; border: none;" hide-gt-md="" aria-label="Toggle Menu">
+							<md-icon icon="images/ic_menu_24px.svg"></md-icon>
+						</button>
+						<div style="line-height: 33px;">smartBeach</div>
+						<div flex=""></div>
+					</div>
+				</div>
+			</md-toolbar-->
+
+			<toolbar></toolbar>
+
+			<md-content md-scroll-y flex ng-view>
+			</md-content>
+		</div>
+
+
+
+		<!-- build:js(.) scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="/bower_components/angular/angular.js"></script>
+		<script src="/bower_components/angular-route/angular-route.js"></script>
+		<script src="/bower_components/angular-animate/angular-animate.js"></script>
+		<script src="/bower_components/angular-aria/angular-aria.js"></script>
+		<script src="/bower_components/hammerjs/hammer.js"></script>
+		<script src="/bower_components/angular-material/angular-material.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
+
+		<!-- build:js({app,.tmp}) scripts/main.js -->
+		<script src="scripts/main.js"></script>
+		<script type="text/javascript" src="scripts/angular-app.js"></script>
+        <script type="text/javascript" src="scripts/controllers/mycontrollers.js"></script>        
+        <script type="text/javascript" src="scripts/services/db.js"></script>
+
+        <script type="text/javascript" src="components/toolbar/toolbar-directive.js"></script>
+
+        <script type="text/javascript" src="templates/login/login.js"></script>
+        <script type="text/javascript" src="templates/creacion-venta/creacion-venta.js"></script>
+        <script type="text/javascript" src="templates/impresion/impresion.js"></script>
+        <script type="text/javascript" src="templates/incidencia/incidencia.js"></script>
+        <script type="text/javascript" src="templates/reubicacion/reubicacion.js"></script>
+        <script type="text/javascript" src="templates/seleccion-casilla-ticket/seleccion-casilla-ticket.js"></script>
+        <script type="text/javascript" src="templates/seleccion-casilla-vacia/seleccion-casilla-vacia.js"></script>
+        <script type="text/javascript" src="templates/seleccion-posicion/seleccion-posicion.js"></script>
+        <script type="text/javascript" src="templates/seleccion-sector/seleccion-sector.js"></script>
+		<script type="text/javascript" src="templates/database/database.js"></script>
+		<script type="text/javascript" src="templates/network/network.js"></script>
+
+		<!-- endbuild -->
+		<script src="cordova.js"></script>
+	</body>
+</html>
